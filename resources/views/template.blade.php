@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>ТЕСТОВОЕ ЗАДАНИЕ </title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ asset ('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset ('font-awesome-4.7.0/css/font-awesome.min.css') }}" />
 </head>
 
 <body>
@@ -73,120 +73,7 @@
     <h2>Download now each free version, no email required.</h2>
     <p>If you are looking for free <b>WordPress themes</b> for your site or blog, we offer a selection of <b>professional themes</b> to suit your needs. We specialise in clean formatting for easy navigation, and all of our themes can be used on both personal and commercial websites. With <b>free versions</b> available of all of our premium themes and plugins, you can make sure it’s exactly right for you.</p>
 </header>
-<section>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/toshiba.png" alt="toshiba">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">Sueva</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є39</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/hp.png" alt="hp">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">SvevaPro</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є5</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/dell.png" alt="dell">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">Avana</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є2</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/aser.jpg" alt="aser">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">Anna</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є29</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/asus.png" alt="asus">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">WooCarousel</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є9</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/dell_red.png" alt="dell_red">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">C-Login</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є5</span>
-            </a>
-        </div>
-    </article>
-    <article>
-        <div class="comp">
-            <span href="#">WP THEME</span>
-            <img src="images/sony.png" alt="sony">
-            <div>
-                <a class="subart1" href="#">DETAILS</a>
-                <a class="subart1" href="#">FREE DOWNLOAD</a>
-            </div>
-        </div>
-        <div class="price">
-            <a class="price_1" href="#">Venice</a>
-            <a class="price_2" href="#">STARTING FROM
-                <span>Є19</span>
-            </a>
-        </div>
-    </article>
-</section>
+@yield('content')
 <div id="form">
     <form action="obr.php" method="POST" name="registr" autocomplete="on">
         <div><b>SUBSCRIBE TO OUR NEWSLETTER AND DOWNLOAD EACH PREMIUM RESOURCE FROM OUR <a href="#">RESERVED AREA</a></b></div>

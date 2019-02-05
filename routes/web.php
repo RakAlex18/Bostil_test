@@ -10,7 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController@index')->name('main.page');
 
-Route::get('/', function () {
-    return view('template');
-});
