@@ -1,6 +1,6 @@
 @extends('template')
-@section('content')
 
+@section('content')
     <section>
         <article>
             <div class="comp">
