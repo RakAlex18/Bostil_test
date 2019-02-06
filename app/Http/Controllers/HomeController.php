@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index()
 
-        return view('front.main-page');
+        {
+        $items = Item::all();
+        return view('front.main-page', compact('items'));
+
     }
 }
