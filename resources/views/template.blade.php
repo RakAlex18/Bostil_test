@@ -9,65 +9,7 @@
 </head>
 
 <body>
-<nav>
-    <img src="images/logo.png">
-    <ul id="menu">
-        <li>
-            <a id="onemenu" href="#">HOME</a>
-        </li>
-        <li>
-            <a href="#">THEMES</a>
-            <ul class="submenu">
-                <li>
-                    <a href="#">Sueva</a>
-                </li>
-
-                <li>
-                    <a href="#">SvevaPro</a>
-                </li>
-                <li>
-                    <a href="#">Avana</a>
-                </li>
-                <li>
-                    <a href="#">Anna</a>
-                </li>
-                <li>
-                    <a href="#">Venice</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">PLUGINS</a>
-            <ul class="submenu">
-                <li>
-                    <a href="#">WooCarousel</a>
-                </li>
-                <li>
-                    <a href="#">C-Login</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">OUR SERVICES</a>
-        </li>
-        <li>
-            <a href="#">HOSTING</a>
-        </li>
-        <li>
-            <a href="#">RESERVED AREA</a>
-        </li>
-        <li>
-            <a href="#">LOGIN</a>
-        </li>
-    </ul>
-    <select name="menu2">
-        <option value="Home">Home</option>
-        <option value="Themes">Themes</option>
-        <option value="Plugins">Plugins</option>
-        <option value="Hosting">Hosting</option>
-        <option value="ReservedArea">Reserved Area</option>
-    </select>
-</nav>
+@include('front.nav')
 <header>
     <h1>10+ WordPress themes & plugins to build your website.</h1>
     <h2>Download now each free version, no email required.</h2>

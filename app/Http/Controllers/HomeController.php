@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -11,7 +13,8 @@ class HomeController extends Controller
 
         {
         $items = Item::all();
-        return view('front.main-page', compact('items'));
+        $cats = DB::table('categories')->get();
+        return view('front.main-page', compact('items','cats'));
 
     }
 }
