@@ -9,11 +9,12 @@
                 <a href="#">{{ $cat->title }}</a>
                 <ul class="submenu">
                     @foreach($items as $item)
-                        <li>
-                            <a href="#">{{ $item->category_id == $cat->id ? $item->name : '' }}</a>
-                        </li>
+                        @if($item->category_id == $cat->id)
+                            <li>
+                                <a href="#">{{ $item->name }}</a>
+                            </li>
+                        @endif
                     @endforeach
-
                 </ul>
             </li>
         @endforeach
@@ -24,7 +25,7 @@
     <select name="menu2">
         <option value="Home">Главная</option>
         @foreach($cats as $cat)
-        <option value="Themes">{{ $cat->title }}</option>
+            <option value="Themes">{{ $cat->title }}</option>
         @endforeach
     </select>
 </nav>
