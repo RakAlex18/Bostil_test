@@ -9,8 +9,9 @@
 </head>
 
 <body>
-
-@include('front.nav')
+@section("navbar")
+    @include('front.nav')
+    @show
 <header>
     <h1>10+ WordPress themes & plugins to build your website.</h1>
     <h2>Download now each free version, no email required.</h2>

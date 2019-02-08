@@ -1,6 +1,5 @@
-
+@section('navbar')
 <nav>
-
     <img src="{{asset ('images/logo.png') }}">
     <ul id="menu">
         <li>
@@ -31,4 +30,4 @@
         @endforeach
     </select>
 </nav>
-
+@endsection('navbar)
