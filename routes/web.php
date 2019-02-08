@@ -11,5 +11,5 @@
 |
 */
 Route::get('/', 'HomeController@index')->name('main.page');
-Route::get('/page/{slug}/{name}', 'PageController@show')->name('show.page');
+Route::get('/{slug}', 'PageController@index')->name('index.page');
 

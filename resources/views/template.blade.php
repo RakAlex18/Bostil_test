@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 @include('front.nav')
 <header>
     <h1>10+ WordPress themes & plugins to build your website.</h1>

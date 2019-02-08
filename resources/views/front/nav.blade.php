@@ -1,4 +1,6 @@
+
 <nav>
+
     <img src="{{asset ('images/logo.png') }}">
     <ul id="menu">
         <li>
@@ -6,7 +8,7 @@
         </li>
         @foreach($cats as $cat)
             <li>
-                <a href="#">{{ $cat->title }}</a>
+                <a href="{{ route('index.page', $cat->slug) }}">{{ $cat->title }}</a>
                 <ul class="submenu">
                     @foreach($items as $item)
                         @if($item->category_id == $cat->id)
@@ -29,3 +31,4 @@
         @endforeach
     </select>
 </nav>
+
