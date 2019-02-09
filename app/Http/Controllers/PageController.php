@@ -12,11 +12,11 @@ class PageController extends Controller
     public function index($slug)
 
     {
-        $cats = Category::all();
+      //  $cats = Category::all();
         $slug = Category::where('slug', $slug)->firstOrFail();
-        $items = Item::all();
+     //   $items = Item::all();
        // echo $slug;
-         return view('front.category-page', compact('cats', 'items', 'slug'));
+         return view('front.category-page', compact( 'slug'));
 
     }
 }

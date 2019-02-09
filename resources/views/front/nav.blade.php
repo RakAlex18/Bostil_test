@@ -1,4 +1,3 @@
-@section('navbar')
 <nav>
     <img src="{{asset ('images/logo.png') }}">
     <ul id="menu">
@@ -12,7 +11,7 @@
                     @foreach($items as $item)
                         @if($item->category_id == $cat->id)
                             <li>
-                                <a href="#">{{ $item->name }}</a>
+                                <a href="{{$cat->slug .'/'. $item->name }}">{{ $item->name }}</a>
                             </li>
                         @endif
                     @endforeach
@@ -30,4 +29,4 @@
         @endforeach
     </select>
 </nav>
-@endsection('navbar)
+
