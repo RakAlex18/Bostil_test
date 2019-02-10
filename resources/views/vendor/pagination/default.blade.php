@@ -1,10 +1,11 @@
 @if ($paginator->hasPages())
+    <nav aria-label="Page navigation example">
     <ul class="pagination">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled"><span>&laquo;</span></li>
+            <li class="disabled "><span>&laquo;</span></li>
         @else
-            <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+            <li class="page-item "><a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
         @endif
 
         {{-- Pagination Elements --}}
@@ -20,7 +21,7 @@
                     @if ($page == $paginator->currentPage())
                         <li class="active"><span>{{ $page }}</span></li>
                     @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        <li class="page-item "><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
@@ -28,9 +29,10 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+            <li class="page-item "><a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
         @else
             <li class="disabled"><span>&raquo;</span></li>
         @endif
     </ul>
+    </nav>
 @endif

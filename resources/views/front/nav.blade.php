@@ -2,7 +2,7 @@
     <img src="{{asset ('images/logo.png') }}">
     <ul id="menu">
         <li>
-            <a id="onemenu" href="#">Главная</a>
+            <a id="onemenu" href="{{ asset (' ')}}">Главная</a>
         </li>
         @foreach($cats as $cat)
             <li>
@@ -11,7 +11,7 @@
                     @foreach($items as $item)
                         @if($item->category_id == $cat->id)
                             <li>
-                                <a href="{{$cat->slug .'/'. $item->name }}">{{ $item->name }}</a>
+                                <a href="{{route('product.page',[$cat->slug, $item->name]) }}">{{ $item->name }}</a>
                             </li>
                         @endif
                     @endforeach

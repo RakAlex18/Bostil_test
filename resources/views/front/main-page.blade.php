@@ -2,7 +2,7 @@
 
 @section('content')
     <section>
-        @foreach($items as $item)
+        @foreach($itemsActiv as $item)
             <article>
                 <div class="comp">
                     <span href="#">WP THEME</span>
@@ -21,5 +21,8 @@
             </article>
         @endforeach
     </section>
+    <div>
+       {{ $itemsActiv->links() }}
+    </div>
 @endsection
 

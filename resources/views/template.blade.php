@@ -6,6 +6,7 @@
     <title>ТЕСТОВОЕ ЗАДАНИЕ </title>
     <link rel="stylesheet" href="{{ asset ('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset ('font-awesome-4.7.0/css/font-awesome.min.css') }}" />
+
 </head>
 
 <body>
@@ -34,6 +35,7 @@
 <footer>
     @include('front.footer')
 </footer>
+
 </body>
 
 </html>
