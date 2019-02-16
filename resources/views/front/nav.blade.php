@@ -19,7 +19,7 @@
             </li>
         @endforeach
         <li>
-            <a href="#">Корзина:
+            <a href="{{ route('basket') }}">Корзина:
                 {{ Session::has('cart') ? Session::get('cart')->totalQty : '0'}}</a>
         </li>
     </ul>

@@ -40,5 +40,25 @@ $request->session()->put('cart', $cart);
 return redirect()->route('main.page');
 
     }
+    public function showCart() {
+        if(!Session::has('cart')) {
+            return view('front.basket', [
+                'products' => null
+            ]);
+        }
+
+        $oldCart = Session::get('cart');
+
+        $cart = new Cart($oldCart);
+        //dump($cart);
+        return view('front.basket', [
+            'products' => $cart->items,
+            'totalQty' => $cart->totalQty,
+            'totalPrice' => $cart->totalPrice
+        ]);
+
+    }
+
+
 
 }
