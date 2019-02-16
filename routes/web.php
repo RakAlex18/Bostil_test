@@ -11,6 +11,8 @@
 |
 */
 Route::get('/', 'HomeController@index')->name('main.page');
+//когда строка 'add.to.cart' была ниже роута 'product.page' выдавало ошибку - нет такой страницы
+Route::get('/get-add-to-cart/{id}', 'ProductController@getAddToCart')->name('add.to.cart');
 Route::get('/{slug}', 'PageController@index')->name('index.page');
 Route::get('/{slug}/{name}', 'ProductController@index')->name('product.page');
 

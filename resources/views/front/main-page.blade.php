@@ -8,7 +8,7 @@
                     <span href="#">WP THEME</span>
                     <img src="{{ asset ('images') . '/' . $item->image }}" alt="{{ $item->name }}">
                     <div>
-                        <a class="subart1" href="#">DETAILS</a>
+                        <a class="subart1" href="{{route('product.page',[$item->category_id, $item->name])}}">ПОДРОБНЕЕ</a>
                         <a class="subart1" href="#">FREE DOWNLOAD</a>
                     </div>
                 </div>
