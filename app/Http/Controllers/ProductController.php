@@ -58,7 +58,12 @@ return redirect()->route('main.page');
         ]);
 
     }
+//очистить корзину
+    public function destroy() {
+        Session::forget('cart');
 
+        return redirect()->route('main.page');
+    }
 
 
 }

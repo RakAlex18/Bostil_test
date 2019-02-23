@@ -48,8 +48,9 @@
         <hr>
         <h2>Общее количество {{ $totalQty }}</h2>
         <h2>Общая цена {{ $totalPrice }}</h2>
-        {{--  <a href="{{ route('destroy') }}">Очистить корзину</a>--}}
-        <button type="button" class="btn btn-secondary">Очистить корзину</button>
+        <a class="btn btn-secondary" href="{{ route('destroy') }}" role="button">
+            Очистить корзину
+        </a>
         <button type="button" class="btn btn-success">Оформить заказ</button>
 
     @else
