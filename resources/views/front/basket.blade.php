@@ -32,13 +32,16 @@
                     <td>{{ $product['item']['price'] }}</td>
                     <td>{{ $product['price'] }}</td>
                     <td>
-                        <button type="button" class="btn btn-danger">добавить</button>
+                        <a class="btn btn-danger" href="{{ route('increase.by.one', $product['item']['id']) }}" role="button">добавить
+                        </a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary">удалить</button>
+                        <a class="btn btn-primary" href="{{ route('reduce.by.one', $product['item']['id']) }}" role="button">удалить
+                        </a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-light">очистить</button>
+                        <a class="btn btn-light" href="{{ route('delete.product', $product['item']['id']) }}" role="button">очистить
+                        </a>
                     </td>
             </tr>
             <?php $i++?>

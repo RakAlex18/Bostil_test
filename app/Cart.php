@@ -48,9 +48,31 @@ public function add($item, $id)//передаем сам продукт и ег�
 
     $this->totalPrice += $item->price;
 }
-// удалить товар
-/*public function delete($id){
+// удалить товар - все товары из строки списка
+    public function deleteLine($id) {
+        $this->totalQty -= $this->items[$id]['qty'];
+        $this->totalPrice -= $this->items[$id]['item']['price'] * $this->items[$id]['qty'];
+        unset($this->items[$id]);
+    }
 
+//уменьшить кол-во товара на 1
+    public function reduceByOne($id) {
+        $this->items[$id]['qty']--;
+        $this->items[$id]['price'] -= $this->items[$id]['item']['price'];
+        $this->totalQty--;
+        $this->totalPrice -= $this->items[$id]['item']['price'];
+        //unset — Удаляет переменную
+        if ($this->items[$id]['qty'] <= 0) {
+            unset($this->items[$id]);
+        }
+    }
 
-      }*/
+//увеличить кол-во товара на 1
+    public function increaseByOne($id) {
+        $this->items[$id]['qty']++;
+        $this->items[$id]['price'] += $this->items[$id]['item']['price'];
+        $this->totalQty++;
+        $this->totalPrice += $this->items[$id]['item']['price'];
+
+    }
 }
